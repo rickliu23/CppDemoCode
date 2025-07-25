@@ -23,9 +23,29 @@ public:
     Constructor& operator=(const Constructor&) = delete;
 
 private:
+    /* 
+    私有化拷贝构造函数
+    针对非C++11版本的代码
+    这样可以防止外部代码直接创建实例
+    */
+    // Constructor(const Constructor&) {
+    //     std::cout << "Copy Constructor called!" << std::endl;
+    // }
+    
+    /* 
+    私有赋值运算符
+    针对非C++11版本的代码
+    这样可以防止外部代码直接创建实例
+    */
+    // Constructor& operator=(const Constructor&) {
+    //      std::cout << "Copy Assignment Operator called!" << std::endl;
+    //      return *this;
+    // }
+
     Constructor() {
         std::cout << "Constructor called!" << std::endl;
     }
+    public:
     ~Constructor() {
         std::cout << "Destructor called!" << std::endl;
     }
