@@ -1,7 +1,5 @@
 #include <iostream>
 
-
-
 class Constructor {
 public:
     static Constructor& GetInstance() {
