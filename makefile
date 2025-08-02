@@ -9,7 +9,11 @@ TARGET = test
 # 测试循环
 # TEST_CC = TEST_RANGE_BASED_FOR_LOOP
 # 测试循环
-TEST_CC = TEST_LAMBDA
+# TEST_CC = TEST_CONSTRUCTOR
+# 测试lambda表达式
+# TEST_CC = TEST_LAMBDA
+# c测试RAII锁
+TEST_CC = TEST_RAII
 
 ifeq ($(TEST_CC), TEST_CONSTRUCTOR)
 TEST_SRC = Constructor/constructor.cc
@@ -17,6 +21,10 @@ else ifeq ($(TEST_CC), TEST_RANGE_BASED_FOR_LOOP)
 TEST_SRC = RangeBasedForLoop/range_based_for_loop.cc
 else ifeq ($(TEST_CC), TEST_LAMBDA)
 TEST_SRC = Lambda/lambda.cc
+else ifeq ($(TEST_CC), TEST_RAII)
+TEST_SRC = Lock/RAII.cc
+else
+$(error TEST_CC not set to a valid value)
 endif
 
 TEST_DEFINE = -D$(TEST_CC)

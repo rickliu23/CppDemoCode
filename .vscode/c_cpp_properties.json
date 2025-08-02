@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "CppDemo",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "TEST_RAII"
+            ],
+            "compilerPath": "C:\\Development_Toolchains\\w64devkit\\bin\\gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
