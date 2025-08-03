@@ -10,6 +10,8 @@
     void lambda_test();
 #elif defined(TEST_RAII)
     void raii_test();
+#elif defined(TEST_SIMPLE_FACTORY)
+    #include "FactoryPattern/simple_factory.h"
 #endif
 
 int main() {
@@ -22,6 +24,8 @@ int main() {
     lambda_test();
 #elif defined(TEST_RAII)
     raii_test();
+#elif defined(TEST_SIMPLE_FACTORY)
+    Board::GetInstance().PrintType();
 #endif
 
     return 0;

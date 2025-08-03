@@ -12,8 +12,10 @@ TARGET = test
 # TEST_CC = TEST_CONSTRUCTOR
 # 测试lambda表达式
 # TEST_CC = TEST_LAMBDA
-# c测试RAII锁
-TEST_CC = TEST_RAII
+# 测试RAII锁
+# TEST_CC = TEST_RAII
+# 测试简单工厂模式
+TEST_CC = TEST_SIMPLE_FACTORY
 
 ifeq ($(TEST_CC), TEST_CONSTRUCTOR)
 TEST_SRC = Constructor/constructor.cc
@@ -23,6 +25,8 @@ else ifeq ($(TEST_CC), TEST_LAMBDA)
 TEST_SRC = Lambda/lambda.cc
 else ifeq ($(TEST_CC), TEST_RAII)
 TEST_SRC = Lock/RAII.cc
+else ifeq ($(TEST_CC), TEST_SIMPLE_FACTORY)
+# TEST_SRC = FactoryPattern/simple_factory.cc
 else
 $(error TEST_CC not set to a valid value)
 endif

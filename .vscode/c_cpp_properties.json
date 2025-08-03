@@ -12,7 +12,7 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [
-                "TEST_RAII"
+                "TEST_SIMPLE_FACTORY"
             ],
             "compilerPath": "C:\\Development_Toolchains\\w64devkit\\bin\\gcc.exe",
             "cStandard": "c11",
